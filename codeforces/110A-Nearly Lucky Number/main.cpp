@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    long number;
+    long long number;
     cin >> number;
     int count = 0;
     while (number != 0)
