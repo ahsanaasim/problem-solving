@@ -55,49 +55,7 @@ void findPrimeFactors(int num)
     }
 }
 
-void find_multipliers(int current, int *factors, int *powers, int num_factors, int i, int *all_factors, int *factorIndex)
-{
-    // cout << endl;
-    while (i < num_factors - 1)
-    {
-        int currentFactor = factors[i];
-        int currentPower = powers[i];
-        for (int j = 0; j <= currentPower; j++)
-        {
-            // cout << current << "*" << currentFactor << "^" << j << " ";
-            // cout << factorIndex << ":" << current * pow(currentFactor, j) << " ";
-            all_factors[(*factorIndex)++] = current * pow(currentFactor, j);
-        }
-    }
-}
 
-void find_factors(int *factors, int *powers, int num_factors, int *all_factors, int num_all_factors)
-{
-    int i = 0;
-    int factorIndex = 0;
-    if (num_factors == 1)
-    {
-        int currentFactor = factors[i];
-        int currentPower = powers[i];
-        for (int j = 0; j <= currentPower; j++)
-        {
-            find_multipliers(pow(currentFactor, j), factors, powers, num_factors, i, all_factors, &factorIndex);
-        }
-    }
-    else
-    {
-        while (i < num_factors - 1)
-        {
-            int currentFactor = factors[i];
-            int currentPower = powers[i];
-            for (int j = 0; j <= currentPower; j++)
-            {
-                find_multipliers(pow(currentFactor, j), factors, powers, num_factors, i + 1, all_factors, &factorIndex);
-            }
-            i++;
-        }
-    }
-}
 int all_factors[100000];
 int numOfFactors = 1;
 void findAllFactors(int num)
