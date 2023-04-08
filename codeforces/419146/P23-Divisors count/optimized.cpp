@@ -48,6 +48,7 @@ void init()
 {
     optimizeIO();
     memset(divisors, 0, sizeof(divisors));
+    // precompute 50% Divisors
     for (int i = 0; i <= N / 2; i++)
     {
         divisors[i] = getNumberOfDivisors(i);
