@@ -1,7 +1,7 @@
 // https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/F
 #include <iostream>
 #include <cstring>
-        using namespace std;
+using namespace std;
 
 void printLine(int i, int n)
 {
