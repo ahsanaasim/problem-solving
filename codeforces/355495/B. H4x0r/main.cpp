@@ -1,3 +1,4 @@
+// https://codeforces.com/group/yg7WhsFsAp/contest/355495/problem/B
 #include <iostream>
 #include <string>
 using namespace std;
